@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
+//import About from './components/About';
 import Alert from './components/Alert';
 import React, { useState } from 'react';
 //import { Routes ,Route } from 'react-router-dom';
@@ -61,15 +61,8 @@ function App() {
         <Alert alert={alert} />
         <div className='container my-3'>
 
-          <Routes>
-            <Route exact path="/" element={<TextForm ShowAlert={ShowAlert} heading='Enter Text To Analyze' mode={mode} />}>
-              {/* <TextForm ShowAlert={ShowAlert} heading='Enter Text To Analyze' mode={mode} /> */}
-            </Route>
-            <Route path="/about" element={<About />}>
-              {/* <About /> */}
-            </Route>
-          </Routes>
-
+            <TextForm ShowAlert={ShowAlert} heading='Enter Text To Analyze' mode={mode} />
+            
           {/* <About/> */}
         </div>
       </Router>
